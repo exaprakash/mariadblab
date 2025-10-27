@@ -15,7 +15,6 @@ tar -xvzf debezium-server-dist/target/debezium-server-dist-3.4.0-SNAPSHOT.tar.gz
 cd ../runner
 #cp ../application-console.properties debezium-server/config/application.properties
 cp ../application-exasol.properties debezium-server/config/application.properties
-cp ../application-exasol.properties debezium-server/config/application.properties
 cp ../Exasol_JDBC-25.2.4/*.jar debezium-server/lib/
 cd debezium-server
 rm /tmp/offsets_connector-stock.dat
