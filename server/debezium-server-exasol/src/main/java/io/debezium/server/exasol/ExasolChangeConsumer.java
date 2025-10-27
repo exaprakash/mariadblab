@@ -90,8 +90,7 @@ public class ExasolChangeConsumer extends BaseChangeConsumer
             this.currentHourRecordsIn += records.size();
         }
 
-        LOGGER.info("EXASOL USER - {} PASSWD - {}", this.username, this.password);
-        LOGGER.info("EXASOL USER - {} PASSWD - {} Batch received - {} records, {} current hour records", this.username, this.password,
+        LOGGER.info("EXASOL Batch received - {} records, {} current hour records", 
                 records.size(), this.currentHourRecordsIn);
 
         NanoTimer batchTimer = NanoTimer.start();
@@ -468,7 +467,6 @@ public class ExasolChangeConsumer extends BaseChangeConsumer
     }
 
     private Connection getConnection() throws SQLException {
-        LOGGER.info("EXASOL USER - {} PASSWORD - {}", this.username, this.password);
         if (this.conn == null || this.conn.isClosed()) {
             if (this.url == null || this.username == null) {
                 throw new SQLException("EXASOL connection properties not provided");
