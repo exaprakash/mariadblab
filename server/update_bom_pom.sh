@@ -7,12 +7,12 @@ BACKUP_FILE="${POM_FILE}.bak"
 cp "$POM_FILE" "$BACKUP_FILE"
 
 # Replace debezium-server-http with debezium-server-console
-sed -i 's|<artifactId>debezium-server-http</artifactId>|<artifactId>debezium-server-console</artifactId>|g' "$POM_FILE"
-sed -i 's|<artifactId>debezium-server-kinesis</artifactId>|<artifactId>debezium-server-exasol</artifactId>|g' "$POM_FILE"
+sed -i 's|<artifactId>debezium-server-http</artifactId>|<artifactId>debezium-server-jsonbuilder</artifactId>|g' "$POM_FILE"
+#sed -i 's|<artifactId>debezium-server-kinesis</artifactId>|<artifactId>debezium-server-exasol</artifactId>|g' "$POM_FILE"
 
 # List of artifactIds to remove
 ARTIFACTS=(
-    # "debezium-server-kinesis"
+     "debezium-server-kinesis"
     "debezium-server-sqs"
     "debezium-server-pubsub"
     "debezium-server-pulsar"

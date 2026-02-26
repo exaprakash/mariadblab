@@ -7,11 +7,11 @@ POM_FILE="debezium-server/pom.xml"
 cp "$POM_FILE" "${POM_FILE}.bak"
 
 # Replace debezium-server-http with debezium-server-console
-sed -i 's|<module>debezium-server-http</module>|<module>debezium-server-console</module>|' "$POM_FILE"
-sed -i 's|<module>debezium-server-kinesis</module>|<module>debezium-server-exasol</module>|' "$POM_FILE"
+sed -i 's|<module>debezium-server-http</module>|<module>debezium-server-jsonbuilder</module>|' "$POM_FILE"
+#sed -i 's|<module>debezium-server-kinesis</module>|<module>debezium-server-exasol</module>|' "$POM_FILE"
 
 # Remove the other listed modules
-# sed -i '/<module>debezium-server-kinesis<\/module>/d' "$POM_FILE"
+ sed -i '/<module>debezium-server-kinesis<\/module>/d' "$POM_FILE"
 sed -i '/<module>debezium-server-pubsub<\/module>/d' "$POM_FILE"
 sed -i '/<module>debezium-server-pulsar<\/module>/d' "$POM_FILE"
 sed -i '/<module>debezium-server-milvus<\/module>/d' "$POM_FILE"

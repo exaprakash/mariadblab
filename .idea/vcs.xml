@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+<<<<<<< HEAD
+=======
+    <mapping directory="$PROJECT_DIR$/server/debezium-server" vcs="Git" />
+>>>>>>> 2e9073747bcfaeb5641b60a46b9c10a3ccffb291
   </component>
 </project>
